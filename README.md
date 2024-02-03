@@ -3,7 +3,8 @@
 Se utiliza como base el repositorio de https://github.com/juanluisbaptiste/docker-postfix
 Se hace un git pull y se construye la imagen como postfix/postfix:latest
 La implementacion hace uso de un archivo .env, no sirve subir los archivos main.cf y master.cf
-Se utiliza docker-compose para iniciar y apagar el stack de servicio con nombre de proyecto
+Se utiliza docker-compose para iniciar y apagar el stack de servicio con nombre de proyecto desde bash cript manage.sh
+Al construir el dockerfile copia el archivo transport que permite acotar el envio de emails a un dominio especifico y limitar el relay a otros. Se pueden agregar multiples entradas pero es necesario editar el archivo transport antes de contruir la imagen.
 
 ## La configuracion de postfix existe en
 ```
