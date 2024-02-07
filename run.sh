@@ -121,7 +121,7 @@ if [ ! -z "${MESSAGE_SIZE_LIMIT}" ]; then
 fi
 
 # Add transport mapping
-add_config_value "transport_maps" "texthash:/etc/postfix/transport"
+add_config_value "transport_maps" "/etc/postfix/transport"
 
 #Start services
 
