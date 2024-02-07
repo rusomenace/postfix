@@ -13,7 +13,7 @@ RUN apk update && \
 COPY run.sh /
 
 # Copy the transport file
-COPY transport /etc/postfix/transport
+# COPY transport /etc/postfix/transport
 
 RUN chmod +x /run.sh
 RUN newaliases
