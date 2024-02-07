@@ -9,3 +9,6 @@ services:
     restart: always
     volumes:
      - "/etc/localtime:/etc/localtime:ro"
+     - ".data:/etc/postfix"
+  volumes:
+    data:
