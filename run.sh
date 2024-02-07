@@ -120,6 +120,9 @@ if [ ! -z "${MESSAGE_SIZE_LIMIT}" ]; then
   echo "Setting configuration option message_size_limit with value: ${MESSAGE_SIZE_LIMIT}"
 fi
 
+# Add transport mapping
+add_config_value "transport_maps" "texthash:/etc/postfix/transport"
+
 #Start services
 
 # If host mounting /var/spool/postfix, we need to delete old pid file before
